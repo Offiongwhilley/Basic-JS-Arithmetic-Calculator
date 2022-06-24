@@ -1,20 +1,33 @@
-let firstOperand = Number(prompt('Please enter a number'))
-let operator = prompt('choose between +, -, x and /')
-let secondOperand = Number(prompt('Please enter a number'))
+let question = prompt('Do you want to perform a calculation? y/ n')
 
-if (operator == '+') {
-    alert(firstOperand + secondOperand)
+if (question == 'y' || question == 'Y') {
+    let firstOperand = Number(prompt('Please enter a number \n'))
+    let operator = prompt('choose between +, -, x. / and % \n')
+    let secondOperand = Number(prompt('Please enter a number \n'))
+
+    if (operator == '+') {
+        alert(firstOperand + secondOperand)
+        
+    } else if(operator == '-'){
+        alert(firstOperand - secondOperand)
     
-} else if(operator == '-'){
-    alert(firstOperand - secondOperand)
+    }else if(operator == 'x'){
+        alert(firstOperand * secondOperand)
+    
+    }else if(operator == '/'){
+        alert(firstOperand / secondOperand)
+    
+    }else if(operator == '%'){
+        alert(firstOperand % secondOperand)
 
-}else if(operator == 'x'){
-    alert(firstOperand * secondOperand)
+    }else{
+        alert('Invalid operator')
+    }
+    
 
-}else if(operator == '/'){
-    alert(firstOperand / secondOperand)
+} else if(question == 'n' || question == 'N'){
+    alert('Have a nice day.')
 
-}
-else{
-    alert('Invalid operator')
-}
+}else
+    alert('Invalid option')
+
